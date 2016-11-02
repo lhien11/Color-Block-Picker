@@ -1,0 +1,42 @@
+h1 {
+    color: peachpuff;
+}
+body {
+    background-color: #333;
+}
+p {
+    font-size: 20px;
+    color: #ddd;
+}
+.red {
+    background-color: red;
+    height: 100px;
+    width: 100px;
+}
+.red:hover {
+    background-color: white; // green
+}
+.yellow {
+    background-color: yellow;
+    height: 100px;
+    width: 100px;
+}
+.yellow:hover {
+    background-color: white;
+}
+.green {
+    background-color: green;
+    height: 100px;
+    width: 100px;
+}
+.green:hover {
+    background-color: white;
+}
+.blue {
+    background-color: blue;
+    height: 100px;
+    width: 100px;
+}
+.blue:hover {
+    background-color: white;
+}
