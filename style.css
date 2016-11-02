@@ -19,10 +19,11 @@ p {
     width: 100px;
     display: inline-block;
     padding: 100px;
+    border-radius: 10px;
 
 }
 .red:hover {
-    background-color: white; // green
+    background-color: #ff6666;
 }
 .yellow {
     background-color: yellow;
@@ -30,10 +31,12 @@ p {
     width: 100px;
     display: inline-block;
     padding: 100px;
+    border-radius: 10px;
+
 
 }
 .yellow:hover {
-    background-color: white;
+    background-color: #ffff80;
 }
 .green {
     background-color: green;
@@ -41,10 +44,12 @@ p {
     width: 100px;
     display: inline-block;
     padding: 100px;
+    border-radius: 10px;
+
 
 }
 .green:hover {
-    background-color: white;
+    background-color: #009900;
 }
 .blue {
     background-color: blue;
@@ -52,8 +57,10 @@ p {
     width: 100px;
     display: inline-block;
     padding: 100px;
+    border-radius: 10px;
+
 
 }
 .blue:hover {
-    background-color: white;
+    background-color: #4d4dff;
 }
