@@ -22,19 +22,20 @@ buttonClicked();
   function buttonClicked(){
     $('#container').on('click', 'div', function(){
       console.log($(this));
-      $(this).fadeOut().fadeIn();
       //checks to see if this button was the one that the game is
       //asking to be clicked
       if (initialColor == $(this).data('color') ){
         //if it was the button to be clicked, randomly finds another
         //button and replaces the change in the dom
-        //$(this).fadeOut().fadeIn();
-        //$(this.animate({left: '250px'}));
+        $(this).fadeOut();
+
         setTimeout(rightColor, 500);
 
 
       } else {
         //corrects the user on a misclick
+        $(this).fadeOut().fadeIn();
+
         $('#color-namer > p').replaceWith('<p>Nope! Click ' +
         initialColor + '.</p>');
       }
