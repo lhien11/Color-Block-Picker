@@ -16,30 +16,46 @@ $(document).ready(function(){
   $('#color-namer').append('<p>Please click on '+ initialColor + '.</p>');
 
   //all buttons
-console.log("here");
-  $('#container').on('click', 'div', function(){
-    //checks to see if this button was the one that the game is
-    //asking to be clicked
-    if (initialColor == $(this).data('color') ){
-      //if it was the button to be clicked, randomly finds another
-      //button and replaces the change in the dom
-      initialColor = pickColor();
-      $('#color-namer > p').replaceWith('<p>The new color to click is ' +
-      initialColor + '.</p>');
-      $('#container').empty();
-      shuffle(array);
-      addToDom(array);
+//console.log("here");
+buttonClicked();
 
-    } else {
-      //corrects the user on a misclick
-      $('#color-namer > p').replaceWith('<p>Nope! Click ' +
-      initialColor + '.</p>');
-    }
-  });
+  function buttonClicked(){
+    $('#container').on('click', 'div', function(){
+      console.log($(this));
+      $(this).fadeOut().fadeIn();
+      //checks to see if this button was the one that the game is
+      //asking to be clicked
+      if (initialColor == $(this).data('color') ){
+        //if it was the button to be clicked, randomly finds another
+        //button and replaces the change in the dom
+        //$(this).fadeOut().fadeIn();
+        //$(this.animate({left: '250px'}));
+        setTimeout(rightColor, 500);
+
+
+      } else {
+        //corrects the user on a misclick
+        $('#color-namer > p').replaceWith('<p>Nope! Click ' +
+        initialColor + '.</p>');
+      }
+    });
+  }
+
+  function rightColor(){
+    initialColor = pickColor();
+    $('#color-namer > p').replaceWith('<p>The new color to click is ' +
+    initialColor + '.</p>');
+    //$('#container').fadeOut();
+    $('#container').empty();
+    shuffle(array);
+    //setTimeout(addToDom, 1000);
+    addToDom(array);
+  }
 
   function addToDom(array){
     for (var i = 0; i < array.length; i++) {
       $('#container').append('<div class="' + array[i] + '"></div>');
+      //$('#container').fadeIn();
       $('.' + array[i]).data('color', array[i]);
     }
   }
