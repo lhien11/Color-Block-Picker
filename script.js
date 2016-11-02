@@ -7,10 +7,8 @@ $(document).ready(function(){
   var min = 1;
   var max = array.length;
   shuffle(array);
-  for (var i = 0; i < array.length; i++) {
-    $('#container').append('<div class="' + array[i] + '"></div>');
-    $('.' + array[i]).data('color', array[i]);
-  }
+  addToDom(array);
+
 
   //sets the first random color and appends it to the dom so the user
   //can see what color to click
@@ -30,16 +28,21 @@ console.log("here");
       initialColor + '.</p>');
       $('#container').empty();
       shuffle(array);
-      for (var i = 0; i < array.length; i++) {
-        $('#container').append('<div class="' + array[i] + '"></div>');
-        $('.' + array[i]).data('color', array[i]);
-      }
+      addToDom(array);
+
     } else {
       //corrects the user on a misclick
       $('#color-namer > p').replaceWith('<p>Nope! Click ' +
       initialColor + '.</p>');
     }
   });
+
+  function addToDom(array){
+    for (var i = 0; i < array.length; i++) {
+      $('#container').append('<div class="' + array[i] + '"></div>');
+      $('.' + array[i]).data('color', array[i]);
+    }
+  }
 
   function shuffle(array){
     var currentIndex = array.length, temporaryValue, randomIndex;
