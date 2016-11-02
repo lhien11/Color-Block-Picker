@@ -109,6 +109,8 @@ buttonClicked();
       break;
       case 4:
       var color = "blue";
+      case 5:
+      var color = "pink";
       break;
     }
     //console.log("the pickColor choice is " + color);
