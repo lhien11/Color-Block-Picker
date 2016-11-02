@@ -1,5 +1,6 @@
 h1 {
     color: peachpuff;
+    text-align: center;
 }
 body {
     background-color: #333;
@@ -8,10 +9,17 @@ p {
     font-size: 20px;
     color: #ddd;
 }
+
+#color-namer{
+  text-align: center;
+}
 .red {
     background-color: red;
     height: 100px;
     width: 100px;
+    display: inline-block;
+    padding: 100px;
+
 }
 .red:hover {
     background-color: white; // green
@@ -20,6 +28,9 @@ p {
     background-color: yellow;
     height: 100px;
     width: 100px;
+    display: inline-block;
+    padding: 100px;
+
 }
 .yellow:hover {
     background-color: white;
@@ -28,6 +39,9 @@ p {
     background-color: green;
     height: 100px;
     width: 100px;
+    display: inline-block;
+    padding: 100px;
+
 }
 .green:hover {
     background-color: white;
@@ -36,6 +50,9 @@ p {
     background-color: blue;
     height: 100px;
     width: 100px;
+    display: inline-block;
+    padding: 100px;
+
 }
 .blue:hover {
     background-color: white;

@@ -27,8 +27,13 @@ buttonClicked();
       if (initialColor == $(this).data('color') ){
         //if it was the button to be clicked, randomly finds another
         //button and replaces the change in the dom
-        $(this).fadeOut();
-
+        // $(this).fadeOut(10, function(){
+        //   //animate({left: '250px'});
+        // });
+        $(this).fadeOut().fadeIn();
+        // $("p").hide("slow", function(){
+        //           alert("The paragraph is now hidden");
+        //       });
         setTimeout(rightColor, 500);
 
 
@@ -49,7 +54,6 @@ buttonClicked();
     //$('#container').fadeOut();
     $('#container').empty();
     shuffle(array);
-    //setTimeout(addToDom, 1000);
     addToDom(array);
   }
 
