@@ -3,7 +3,7 @@ $(document).ready(function(){
   $el = $('#container').children().last();
 
   //appends 4 colors to the dom
-  var array = ['yellow', 'red', 'blue', 'green'];
+  var array = ['yellow', 'red', 'blue', 'green', 'pink'];
   var min = 1;
   var max = array.length;
   shuffle(array);
@@ -41,6 +41,8 @@ buttonClicked();
       } else {
         //corrects the user on a misclick
         $(this).fadeOut().fadeIn();
+          //$(this).effect("shake");
+
 
         $('#color-namer > p').replaceWith('<p>Nope! Click ' +
         initialColor + '.</p>');
