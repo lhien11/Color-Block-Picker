@@ -6,6 +6,7 @@ $(document).ready(function(){
   var array = ['yellow', 'red', 'blue', 'green'];
   var min = 1;
   var max = array.length;
+  shuffle(array);
   for (var i = 0; i < array.length; i++) {
     $('#container').append('<div class="' + array[i] + '"></div>');
     $('.' + array[i]).data('color', array[i]);
