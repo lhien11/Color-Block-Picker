@@ -30,7 +30,8 @@ buttonClicked();
         // $(this).fadeOut(10, function(){
         //   //animate({left: '250px'});
         // });
-        $(this).fadeOut().fadeIn();
+        //$(this).fadeOut().fadeIn();
+        $(this).slideToggle();
         // $("p").hide("slow", function(){
         //           alert("The paragraph is now hidden");
         //       });
