@@ -4,7 +4,6 @@ $(document).ready(function(){
 
   //appends 4 colors to the dom
   var array = ['yellow', 'red', 'blue', 'green'];
-  shuffle(array);
   var min = 1;
   var max = array.length;
   for (var i = 0; i < array.length; i++) {
@@ -18,6 +17,7 @@ $(document).ready(function(){
   $('#color-namer').append('<p>Please click on '+ initialColor + '.</p>');
 
   //all buttons
+console.log("here");
   $('#container').on('click', 'div', function(){
     //checks to see if this button was the one that the game is
     //asking to be clicked
@@ -27,6 +27,12 @@ $(document).ready(function(){
       initialColor = pickColor();
       $('#color-namer > p').replaceWith('<p>The new color to click is ' +
       initialColor + '.</p>');
+      $('#container').empty();
+      shuffle(array);
+      for (var i = 0; i < array.length; i++) {
+        $('#container').append('<div class="' + array[i] + '"></div>');
+        $('.' + array[i]).data('color', array[i]);
+      }
     } else {
       //corrects the user on a misclick
       $('#color-namer > p').replaceWith('<p>Nope! Click ' +
@@ -62,6 +68,7 @@ $(document).ready(function(){
   //uses the random number to choose the next color
   function pickColor(){
     var newNum = randomNum();
+    shuffle(array);
     switch(newNum){
       case 1:
       var color = "yellow";
